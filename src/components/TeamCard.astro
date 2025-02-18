@@ -1,0 +1,19 @@
+---
+export interface Props {
+  name: string;
+  role: string;
+  image: string;
+  twitter: string;
+  linkedin: string;
+}
+
+const { name, role, image, twitter, linkedin } = Astro.props;
+---
+
+<div style="text-align: center;">
+  <img src={image} alt={name} style="width: 150px; border-radius: 50%;">
+  <h3 style="color: #DAA520;">{name}</h3>
+  <p>{role}<br>Bitcoin</p>
+  <a href={twitter}><img src="/twitter-icon.png" alt="Twitter" width="24"></a>
+  <a href={linkedin}><img src="/linkedin-icon.png" alt="LinkedIn" width="24"></a>
+</div>
